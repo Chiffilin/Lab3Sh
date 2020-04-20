@@ -1,11 +1,13 @@
-﻿using System;
+using System;
 using System.Numerics;
 
 public class Example
 {
     public static void Main()
     {
-        double R;
+        Complex r;
+       
+        Complex R;
         Console.WriteLine("Введите первое комплексное число : ");
         Console.WriteLine("Введите действительную часть: ");
         double a1 = Convert.ToDouble(Console.ReadLine());
@@ -37,8 +39,11 @@ public class Example
         double d2 = Convert.ToDouble(Console.ReadLine());
         Complex d = new Complex(b1, b2);
         Console.WriteLine(d);
-     
-    Console.WriteLine(a) ;
+
+        r = Complex.Pow(a, 1/3);
+        R = r - ((b + c) / a) + b * d;
+       
+        Console.WriteLine("Ответ: "+ R);
     }
     
 }
